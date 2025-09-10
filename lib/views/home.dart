@@ -1,4 +1,5 @@
 import 'package:demo/utils/CenteredView.dart';
+import 'package:demo/widgets/FourthCard/FourthCard.dart';
 import 'package:demo/widgets/NavigationBar/Drawer_Items.dart';
 import 'package:demo/widgets/NavigationBar/NavigationBar.dart';
 import 'package:demo/widgets/SecondCard/SecondCard.dart';
@@ -116,7 +117,8 @@ class _HomeState extends State<Home> {
               SizedBox(height: 150),
               Secondcard(),
              // SizedBox(height: 150),
-              Thirdcard()
+              Thirdcard(),
+              FourthCard()
             ],
           ),
         ),
