@@ -3,6 +3,7 @@ import 'package:demo/widgets/NavigationBar/Drawer_Items.dart';
 import 'package:demo/widgets/NavigationBar/NavigationBar.dart';
 import 'package:demo/widgets/SecondCard/SecondCard.dart';
 import 'package:demo/widgets/firstCard/FirstCard.dart';
+import 'package:demo/widgets/thirdCard/thirdCard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -76,11 +77,13 @@ class _HomeState extends State<Home> {
                 begin: Alignment.center,
                 end: Alignment.center,
                 colors: [
-                  Color(0xFF1D0E30),
+                  Color.fromARGB(238, 19, 9, 32),
                   Color(0xFF1D0A33),
                   Color(0xFF130425),
                 ],
+                
               ),
+              
             ),
           ),
         ),
@@ -112,7 +115,8 @@ class _HomeState extends State<Home> {
               FirstCard(),
               SizedBox(height: 150),
               Secondcard(),
-              SizedBox(height: 500),
+             // SizedBox(height: 150),
+              Thirdcard()
             ],
           ),
         ),
