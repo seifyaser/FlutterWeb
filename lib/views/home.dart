@@ -95,7 +95,7 @@ class _HomeState extends State<Home> {
           left: 0,
           right: 0,
           child: Image.asset(
-            'firstbackgropund.jpg',
+            'assets/firstbackgropund.jpg',
             fit: BoxFit.cover,
             height: 600,
             color: Colors.black.withOpacity(0.3),
@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.only(top: 100), // مسافة عشان ما يخشش تحت الـ Navbar
             children: const [
               FirstCard(),
-              SizedBox(height: 150),
+              SizedBox(height: 65),
               Secondcard(),
              // SizedBox(height: 150),
               Thirdcard(),

@@ -98,21 +98,21 @@ double textSize =  sizingInformation.deviceScreenType == DeviceScreenType.mobile
   children:  [
     PhotoTextRow(
       text: 'Company-specific training.',
-      iconPath: "flash-dynamic-gradient.png",
+      iconPath: "assets/flash-dynamic-gradient.png",
        PlaceholderSize: PlaceholderSize,
        photoIConSize: 70,
     ),
     SizedBox(height: 20),
      PhotoTextRow(
       text: '24/7 Automated Support.',
-      iconPath: "chat-text-dynamic-gradient.png",
+      iconPath: "assets/chat-text-dynamic-gradient.png",
      PlaceholderSize: PlaceholderSize,
      photoIConSize: 70,
     ),
     SizedBox(height: 20),
      PhotoTextRow(
       text: 'Scalable and Secure.',
-      iconPath: "sheild-dynamic-gradient.png",
+      iconPath: "assets/sheild-dynamic-gradient.png",
      PlaceholderSize: PlaceholderSize,
      photoIConSize: 70,
     ),
@@ -121,7 +121,7 @@ double textSize =  sizingInformation.deviceScreenType == DeviceScreenType.mobile
 
                   SizedBox(
                     width: 400,
-                    child: Image.asset('Rectanglemobilepic.png')),
+                    child: Image.asset('assets/Rectanglemobilepic.png')),
                  
                 ],
                ),

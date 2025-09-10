@@ -39,14 +39,18 @@ class CustomButton extends StatelessWidget {
         ),
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
       ),
-      child: Text(
-        text,
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 22,
-          color: foregroundColor,
-        ),
-      ),
+      child: FittedBox(
+  fit: BoxFit.scaleDown,
+  child: Text(
+    text,
+    style: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 20, 
+      color: foregroundColor,
+    ),
+  ),
+)
+
     );
   }
 }

@@ -103,7 +103,7 @@ class FirstPageDesktop extends StatelessWidget {
                       ? 300
                       : 350,
               child: Image.asset(
-                'firstpagephoto.png',
+                'assets/firstpagephoto.png',
                 fit: BoxFit.contain,
               ),
             ),

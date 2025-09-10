@@ -41,10 +41,10 @@ SizedBox(height: 20,),
 
    Text('Arabic Customer Service Chatbot',style: TextStyle(fontSize: 16,color: Colors.white,fontWeight: FontWeight.bold),),
 
-SizedBox(height: 50,),
+SizedBox(height: 35,),
 
              Padding(
-               padding: const EdgeInsets.symmetric(horizontal: 40),
+               padding: const EdgeInsets.only(left: 20, right: 20),
                child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -53,27 +53,27 @@ SizedBox(height: 50,),
                  children:  [
                    PhotoTextRow(
                      text: 'Company-specific training.',
-                     iconPath: "flash-dynamic-gradient.png",
+                     iconPath: "assets/flash-dynamic-gradient.png",
                      
                    ),
                    SizedBox(height: 20),
                     PhotoTextRow(
                      text: '24/7 Automated Support.',
-                     iconPath: "chat-text-dynamic-gradient.png",
+                     iconPath: "assets/chat-text-dynamic-gradient.png",
                   
                    ),
                    SizedBox(height: 20),
                     PhotoTextRow(
                      text: 'Scalable and Secure.',
-                     iconPath: "sheild-dynamic-gradient.png",
+                     iconPath: "assets/sheild-dynamic-gradient.png",
                     
                    ),
                  ],
                ),
                
                 SizedBox(
-                    width: 150,
-                    child: Image.asset('Rectanglemobilepic.png')),
+                    width: 100,
+                    child: Image.asset('assets/Rectanglemobilepic.png')),
                 ],
                ),
              ),

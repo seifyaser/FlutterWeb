@@ -36,7 +36,7 @@ class Customnumbercontainer extends StatelessWidget {
             // Animated Counter
             TweenAnimationBuilder<double>(
               tween: Tween(begin: 0, end: number), 
-              duration: const Duration(seconds: 2),
+              duration: const Duration(seconds: 4),
               builder: (context, value, child) {
                 return ShaderMask(
                   shaderCallback: (Rect bounds) {

@@ -38,16 +38,27 @@ class Textplaceholder extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20),
-        GradientText(
-          text: "We deliver measurable business outcomes.",
-          style: TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: titleSize,
-          ),
-          gradient: const LinearGradient(
-            colors: [Colors.blue, Colors.purple, Colors.red],
-          ),
-        ),
+        FittedBox(
+  fit: BoxFit.scaleDown, 
+  child: GradientText(
+    text: "We deliver measurable business outcomes.",
+    style: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: titleSize, 
+    ),
+    gradient: const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Color(0xFF2196F3), // Blue
+        Color(0xFF9C27B0), // Purple
+        Color(0xFFF44336), // Red
+      ],
+      stops: [0.1, 0.5, 0.9],
+    ),
+  ),
+)
+
       ],
     );
   }

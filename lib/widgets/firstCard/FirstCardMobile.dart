@@ -33,7 +33,7 @@ class Firstpagemobile extends StatelessWidget {
               ),
                    const SizedBox(height: 10),
               Image.asset(
-                  'firstpagephoto.png',
+                  'assets/firstpagephoto.png',
                   fit: BoxFit.contain,
                 ),
  const SizedBox(height: 25),
@@ -43,7 +43,7 @@ class Firstpagemobile extends StatelessWidget {
                   backgroundColor: const Color(0xFFE0E0E0),
                   foregroundColor: const Color(0xFF2A1B4D),
                   width: 280,
-                  height:50 ,
+                  height:100 ,
                   borderRadius: 10,
                 ),
                
@@ -56,7 +56,7 @@ class Firstpagemobile extends StatelessWidget {
                   borderColor: Colors.white,
                   elevation: 0,
                   width: 280,
-                  height:50 ,
+                  height:100 ,
                   borderRadius: 12,
                 ),
         ],

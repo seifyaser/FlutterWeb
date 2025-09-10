@@ -12,5 +12,6 @@ class FirstCard extends StatelessWidget {
       desktop: (context)=> FirstPageDesktop (),
       mobile: (context)=> Firstpagemobile(),
     );
+    
   }
 }
