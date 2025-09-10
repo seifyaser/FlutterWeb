@@ -1,6 +1,7 @@
 import 'package:demo/utils/CenteredView.dart';
 import 'package:demo/widgets/NavigationBar/Drawer_Items.dart';
 import 'package:demo/widgets/NavigationBar/NavigationBar.dart';
+import 'package:demo/widgets/SecondCard/SecondCard.dart';
 import 'package:demo/widgets/firstCard/FirstCard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
@@ -63,63 +64,78 @@ class _HomeState extends State<Home> {
   }
 
   Widget buildMainScaffold({required VoidCallback onMenuPressed}) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Stack(
-        children: [
-          // 1. gradient ثابت
-          Positioned.fill(
-            child: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.center,
-                  end: Alignment.center,
-                  colors: [
-                    Color(0xFF1D0E30),
-                     Color(0xFF1D0A33),
-                    Color(0xFF130425),
-                   
-                  ],
-                ),
+  return Scaffold(
+    backgroundColor: Colors.transparent,
+    body: Stack(
+      children: [
+        // 1. gradient ثابت
+        Positioned.fill(
+          child: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.center,
+                end: Alignment.center,
+                colors: [
+                  Color(0xFF1D0E30),
+                  Color(0xFF1D0A33),
+                  Color(0xFF130425),
+                ],
               ),
             ),
           ),
+        ),
 
-          // 2. الصورة تتحرك مع scroll
-          Positioned(
-            top: -_scrollOffset * 0.5, // سرعة الحركة 0.5 لتأثير parallax
-            left: 0,
-            right: 0,
-            child: Image.asset(
-              'firstbackgropund.jpg',
-              fit: BoxFit.cover,
-              height: 800, // ارتفاع الصورة
-              color: Colors.black.withOpacity(0.3),
-              colorBlendMode: BlendMode.darken,
-            ),
+        // 2. الصورة تتحرك مع scroll
+        Positioned(
+          top: -_scrollOffset * 0.5, // تأثير parallax
+          left: 0,
+          right: 0,
+          child: Image.asset(
+            'firstbackgropund.jpg',
+            fit: BoxFit.cover,
+            height: 600,
+            color: Colors.black.withOpacity(0.3),
+            colorBlendMode: BlendMode.darken,
           ),
+        ),
 
-          // 3. المحتوى + Scrollbar فوق كل حاجة
-          Scrollbar(
-            trackVisibility: true,
-            thickness: 8,
-            radius: const Radius.circular(12),
+        // 3. المحتوى (ListView) تحت الـ NavigationBar
+        Scrollbar(
+          trackVisibility: true,
+          thickness: 8,
+          radius: const Radius.circular(12),
+          controller: _scrollController,
+          child: ListView(
             controller: _scrollController,
-            child: ListView(
-              controller: _scrollController,
-              children: [
-                CenteredView(
-                  child: CustomNavigationBar(
-                    onMenuPressed: onMenuPressed,
-                  ),
-                ),
-                Firstpage(),
-                const SizedBox(height: 500), // مساحة إضافية لو تحب scroll أكبر
-              ],
-            ),
+            padding: const EdgeInsets.only(top: 100), // مسافة عشان ما يخشش تحت الـ Navbar
+            children: const [
+              FirstCard(),
+              SizedBox(height: 150),
+              Secondcard(),
+              SizedBox(height: 500),
+            ],
           ),
-        ],
+        ),
+
+        // 4. CustomNavigationBar مثبت فوق
+        Positioned(
+  top: 0,
+  left: 0,
+  right: 0,
+  child: Container(
+    decoration: BoxDecoration(
+      color: Colors.black.withOpacity(0.2),
+    ),
+    child: CenteredView(
+      child: CustomNavigationBar(
+        onMenuPressed: onMenuPressed,
       ),
-    );
-  }
+    ),
+  ),
+),
+      ],
+    ),
+  );
+}
+
 }

@@ -40,7 +40,7 @@ class FirstPageDesktop extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 120),
+            SizedBox(height: 100),
             // العنوان الرئيسي
             Text(
               'Arabic Customer Copilot for Your Business',
