@@ -70,41 +70,36 @@ class _HomeState extends State<Home> {
           ),
 
           // المحتوى الرئيسي
-          Scrollbar(
-            trackVisibility: true,
-            thickness: 8,
-            radius: const Radius.circular(12),
-            child: NotificationListener<ScrollNotification>(
-              onNotification: (scrollNotification) {
-                if (scrollNotification is ScrollUpdateNotification) {
-                  setState(() {
-                    _scrollOffset = scrollNotification.metrics.pixels;
-                  });
+          NotificationListener<ScrollNotification>(
+            onNotification: (scrollNotification) {
+              if (scrollNotification is ScrollUpdateNotification) {
+                setState(() {
+                  _scrollOffset = scrollNotification.metrics.pixels;
+                });
+              }
+              return false;
+            },
+            child: ScrollablePositionedList.builder(    // بديل لل listview عشان cards بتاعت nav bar تشتتغل لما تضغط عليها كلها
+              itemScrollController: _itemScrollController,
+              itemPositionsListener: _itemPositionsListener,
+              padding: const EdgeInsets.only(top: 100),
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                switch (index) {
+                  case 0:
+                    return FirstCard();
+                  case 1:
+                    return Secondcard();
+                  case 2:
+                    return Thirdcard();
+                  case 3:
+                    return FourthCard();
+                  case 4:
+                    return ContactUsPage();
+                  default:
+                    return const SizedBox.shrink();
                 }
-                return false;
               },
-              child: ScrollablePositionedList.builder(    // بديل لل listview عشان cards بتاعت nav bar تشتتغل لما تضغط عليها كلها
-                itemScrollController: _itemScrollController,
-                itemPositionsListener: _itemPositionsListener,
-                padding: const EdgeInsets.only(top: 100),
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  switch (index) {
-                    case 0:
-                      return FirstCard();
-                    case 1:
-                      return Secondcard();
-                    case 2:
-                      return Thirdcard();
-                    case 3:
-                      return FourthCard();
-                    case 4:
-                      return ContactUsPage();
-                    default:
-                      return const SizedBox.shrink();
-                  }
-                },
-              ),
             ),
           ),
 

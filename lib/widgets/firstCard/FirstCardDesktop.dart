@@ -107,6 +107,8 @@ class FirstPageDesktop extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
+
+          //  const SizedBox(height: 150),
           ],
         ),
       );

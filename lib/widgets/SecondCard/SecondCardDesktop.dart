@@ -55,6 +55,7 @@ double textSize =  sizingInformation.deviceScreenType == DeviceScreenType.mobile
         return Center(
           child: Column(
             children: [
+              SizedBox(height: 150,),
               Textplaceholder(
                 titleSize: titleSize,
                 descriptionSize: descriptionSize,

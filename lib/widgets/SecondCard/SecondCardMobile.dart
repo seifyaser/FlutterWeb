@@ -10,6 +10,7 @@ class SecondCardMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(height: 80,),
         Textplaceholder(titleSize: 20, descriptionSize: 14, textAlign: TextAlign.center,),
         SizedBox(height: 20,),
          Column(
