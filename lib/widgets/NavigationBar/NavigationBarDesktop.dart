@@ -3,8 +3,10 @@ import 'package:demo/widgets/NavigationBar/NavBarItem.dart';
 import 'package:demo/widgets/NavigationBar/NavBarLogo.dart';
 import 'package:flutter/material.dart';
 
-class Navigationbardesktop extends StatelessWidget {
-  const Navigationbardesktop({super.key});
+class NavigationBarDesktop extends StatelessWidget {
+  final Function(String) onItemSelected;
+
+  const NavigationBarDesktop({Key? key, required this.onItemSelected}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,21 +15,22 @@ class Navigationbardesktop extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-        NavBarLogo(),
-        Row(
-         mainAxisSize: MainAxisSize.min,
-              children:[
-                NavBarItem(title: 'Home'),
-                SizedBox(width: 40),
-                NavBarItem(title: 'Details'),
-                SizedBox(width: 40),
-                NavBarItem(title: 'Our Team'),
-                SizedBox(width: 40),
-                NavBarItem(title: 'Contact Us'),
-              ],
-            ),
-        TryButton(text: 'Try Model')
-      ]),
+          NavBarLogo(),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              NavBarItem(title: 'Home', onTap: onItemSelected),
+              const SizedBox(width: 40),
+              NavBarItem(title: 'Details', onTap: onItemSelected),
+              const SizedBox(width: 40),
+              NavBarItem(title: 'Our Team', onTap: onItemSelected),
+              const SizedBox(width: 40),
+              NavBarItem(title: 'Contact Us', onTap: onItemSelected),
+            ],
+          ),
+          TryButton(text: 'Try Model'),
+        ],
+      ),
     );
   }
 }

@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
- 
-  const NavBarItem({ required this.title});
+  final Function(String)? onTap;
+
+  const NavBarItem({Key? key, required this.title, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: TextStyle(fontSize: 22,color: Colors.white),
+    return InkWell(
+      onTap: () {  onTap?.call(title); },
+      child: Text(
+        title,
+        style: const TextStyle(fontSize: 22, color: Colors.white),
+      ),
     );
   }
 }

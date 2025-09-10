@@ -2,12 +2,14 @@ import 'package:demo/widgets/NavigationBar/NavBarLogo.dart';
 import 'package:flutter/material.dart';
 
 class NavigationBarMobile extends StatelessWidget {
-
   final VoidCallback onMenuPressed;
+  final Function(String) onItemSelected;
 
-
-  const NavigationBarMobile({Key? key, required this.onMenuPressed})
-      : super(key: key);
+  const NavigationBarMobile({
+    Key? key,
+    required this.onMenuPressed,
+    required this.onItemSelected,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +20,9 @@ class NavigationBarMobile extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-
             IconButton(
               icon: const Icon(Icons.menu, color: Colors.white),
-              onPressed: onMenuPressed, 
+              onPressed: onMenuPressed,
             ),
             const NavBarLogo(),
           ],
