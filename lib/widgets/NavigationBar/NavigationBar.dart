@@ -5,7 +5,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 class CustomNavigationBar extends StatelessWidget {
   final VoidCallback onMenuPressed;
-  final Function(String) onItemSelected; // callback for item tap
+  final Function(String) onItemSelected; 
 
   const CustomNavigationBar({
     Key? key,
