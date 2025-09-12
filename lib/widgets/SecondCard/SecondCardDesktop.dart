@@ -18,34 +18,25 @@ class SecondcardDesktop extends StatelessWidget {
             : TextAlign.center;
 
         // حجم العنوان الرئيسي
-        double titleSize =
-            sizingInformation.deviceScreenType == DeviceScreenType.mobile
-            ? 12
-            : sizingInformation.deviceScreenType == DeviceScreenType.Tablet
+        double titleSize =sizingInformation.deviceScreenType == DeviceScreenType.Tablet
             ? 15
             : 32;
 
         // حجم النص الوصف 
-       double PlaceholderSize =
-            sizingInformation.deviceScreenType == DeviceScreenType.mobile
-            ? 12
-            : sizingInformation.deviceScreenType == DeviceScreenType.Tablet
+       double PlaceholderSize =sizingInformation.deviceScreenType == DeviceScreenType.Tablet
             ? 40
             : 50;
         // حجم النص الوصف
-        double descriptionSize =
-            sizingInformation.deviceScreenType == DeviceScreenType.mobile
-            ? 14
-            : sizingInformation.deviceScreenType == DeviceScreenType.Tablet
+        double descriptionSize = sizingInformation.deviceScreenType == DeviceScreenType.Tablet
             ? 16
             : 19;
 
         // حجم نص الارقام لصف containers
         double NumberSize =
-            sizingInformation.deviceScreenType == DeviceScreenType.mobile
+            sizingInformation.deviceScreenType == DeviceScreenType.tablet
             ? 25
             : 50;
-double textSize =  sizingInformation.deviceScreenType == DeviceScreenType.mobile
+double textSize =  sizingInformation.deviceScreenType == DeviceScreenType.tablet
             ? 16
             : 22;
 

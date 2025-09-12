@@ -14,24 +14,20 @@ class FirstPageDesktop extends StatelessWidget {
           : TextAlign.center;
 
       // حجم العنوان الرئيسي
-      double titleSize = sizingInformation.deviceScreenType == DeviceScreenType.mobile
-          ? 40
-          : sizingInformation.deviceScreenType == DeviceScreenType.Tablet
+      double titleSize =sizingInformation.deviceScreenType == DeviceScreenType.Tablet
               ? 55
               : 70;
 
       // حجم النص الوصف
-      double descriptionSize = sizingInformation.deviceScreenType == DeviceScreenType.mobile
-          ? 16
-          : sizingInformation.deviceScreenType == DeviceScreenType.Tablet
+      double descriptionSize = sizingInformation.deviceScreenType == DeviceScreenType.Tablet
               ? 22
               : 30;
 
       // عرض الأزرار
-      double buttonWidth = sizingInformation.deviceScreenType == DeviceScreenType.mobile
+      double buttonWidth = sizingInformation.deviceScreenType == DeviceScreenType.tablet
           ? 200
           : 330;
-      double buttonHeight = sizingInformation.deviceScreenType == DeviceScreenType.mobile
+      double buttonHeight = sizingInformation.deviceScreenType == DeviceScreenType.tablet
           ? 50
           : 83;
 
@@ -97,9 +93,7 @@ class FirstPageDesktop extends StatelessWidget {
 
             // الصورة
             SizedBox(
-              height: sizingInformation.deviceScreenType == DeviceScreenType.Mobile
-                  ? 200
-                  : sizingInformation.deviceScreenType == DeviceScreenType.Tablet
+              height: sizingInformation.deviceScreenType == DeviceScreenType.Tablet
                       ? 300
                       : 350,
               child: Image.asset(
