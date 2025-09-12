@@ -4,7 +4,7 @@ class NavBarItem extends StatelessWidget {
   final String title;
   final Function(String)? onTap;
 
-  const NavBarItem({Key? key, required this.title, this.onTap}) : super(key: key);
+  const NavBarItem({super.key, required this.title, this.onTap});
 
   @override
   Widget build(BuildContext context) {

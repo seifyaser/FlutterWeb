@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 class NavigationBarDesktop extends StatelessWidget {
   final Function(String) onItemSelected;
 
-  const NavigationBarDesktop({Key? key, required this.onItemSelected}) : super(key: key);
+  const NavigationBarDesktop({super.key, required this.onItemSelected});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

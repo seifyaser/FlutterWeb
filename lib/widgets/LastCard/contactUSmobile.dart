@@ -4,6 +4,8 @@ import 'package:demo/widgets/LastCard/buildInfoSection.dart';
 import 'package:flutter/material.dart';
 
 class ContactUsMobile extends StatelessWidget {
+  const ContactUsMobile({super.key});
+
   @override
   Widget build(BuildContext context) {
     const Color textColor = Colors.white;

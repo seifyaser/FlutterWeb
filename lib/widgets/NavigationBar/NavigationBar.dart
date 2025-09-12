@@ -8,10 +8,10 @@ class CustomNavigationBar extends StatelessWidget {
   final Function(String) onItemSelected; 
 
   const CustomNavigationBar({
-    Key? key,
+    super.key,
     required this.onMenuPressed,
     required this.onItemSelected,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

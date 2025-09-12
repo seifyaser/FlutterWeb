@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
   final double borderRadius;
 
   const CustomButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.onPressed,
     this.backgroundColor = Colors.grey,
@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
     this.width = 200,
     this.height = 60,
     this.borderRadius = 12,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class CustomButton extends StatelessWidget {
 
 class TryButton extends StatelessWidget {
   final String text;
-  const TryButton({Key? key, required this.text}) : super(key: key);
+  const TryButton({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -67,14 +67,6 @@ class TryButton extends StatelessWidget {
       onPressed: () {
 
       },
-      
-      child:  Text(
-        text,
-        style: TextStyle(
-          fontSize: 20, 
-          fontWeight: FontWeight.bold,
-        ),
-      ),
 
 
       style: ElevatedButton.styleFrom(
@@ -84,6 +76,14 @@ class TryButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10), 
+        ),
+      ),
+      
+      child:  Text(
+        text,
+        style: TextStyle(
+          fontSize: 20, 
+          fontWeight: FontWeight.bold,
         ),
       ),
     );

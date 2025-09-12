@@ -82,6 +82,9 @@ class _HomeState extends State<Home> {
               }
               return false;
             },
+            //A ScrollablePositionedList works much like the builder version of ListView
+            // except that the list can be scrolled or jumped to a specific item.
+            
             child: ScrollablePositionedList.builder(    // بديل لل listview عشان cards بتاعت nav bar تشتتغل لما تضغط عليها كلها
               itemScrollController: _itemScrollController,
               itemPositionsListener: _itemPositionsListener,
@@ -133,7 +136,7 @@ class _HomeState extends State<Home> {
 
                       case 'Contact Us':
                         _itemScrollController.scrollTo(
-                            index: 4, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+                            index: 4, duration: const Duration(milliseconds: 1200), curve: Curves.easeInOut);
                         break;
                     }
                   },

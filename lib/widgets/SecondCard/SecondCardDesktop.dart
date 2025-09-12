@@ -1,9 +1,7 @@
-import 'package:demo/utils/GradientText.dart';
 import 'package:demo/widgets/SecondCard/CustomNumberContainer.dart';
 import 'package:demo/widgets/SecondCard/PhotoTextRow.dart';
 import 'package:demo/widgets/SecondCard/TextPlaceholder.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class SecondcardDesktop extends StatelessWidget {

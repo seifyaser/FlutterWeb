@@ -6,10 +6,10 @@ class NavigationBarMobile extends StatelessWidget {
   final Function(String) onItemSelected;
 
   const NavigationBarMobile({
-    Key? key,
+    super.key,
     required this.onMenuPressed,
     required this.onItemSelected,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
