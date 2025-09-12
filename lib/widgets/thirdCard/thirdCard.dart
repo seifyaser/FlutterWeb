@@ -10,7 +10,7 @@ class Thirdcard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10),
-      child: Image.asset('assets/our-team.png'),
+      child: Image.asset('assets/our-team.webp'),
     );
   }
 }

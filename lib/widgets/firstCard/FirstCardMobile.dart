@@ -1,4 +1,4 @@
-import 'package:demo/widgets/button.dart';
+import 'package:demo/utils/button.dart';
 import 'package:flutter/material.dart';
 
 class Firstpagemobile extends StatelessWidget {
@@ -33,7 +33,7 @@ class Firstpagemobile extends StatelessWidget {
               ),
                    const SizedBox(height: 10),
               Image.asset(
-                  'assets/firstpagephoto.png',
+                  'assets/firstpagephoto.webp',
                   fit: BoxFit.contain,
                 ),
  const SizedBox(height: 25),

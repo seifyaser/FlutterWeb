@@ -54,19 +54,19 @@ SizedBox(height: 35,),
                  children:  [
                    PhotoTextRow(
                      text: 'Company-specific training.',
-                     iconPath: "assets/flash-dynamic-gradient.png",
+                     iconPath: "assets/flash-dynamic-gradient.webp",
                      
                    ),
                    SizedBox(height: 20),
                     PhotoTextRow(
                      text: '24/7 Automated Support.',
-                     iconPath: "assets/chat-text-dynamic-gradient.png",
+                     iconPath: "assets/chat-text-dynamic-gradient.webp",
                   
                    ),
                    SizedBox(height: 20),
                     PhotoTextRow(
                      text: 'Scalable and Secure.',
-                     iconPath: "assets/sheild-dynamic-gradient.png",
+                     iconPath: "assets/sheild-dynamic-gradient.webp",
                     
                    ),
                  ],
@@ -74,7 +74,7 @@ SizedBox(height: 35,),
                
                 SizedBox(
                     width: 100,
-                    child: Image.asset('assets/Rectanglemobilepic.png')),
+                    child: Image.asset('assets/Rectanglemobilepic.webp')),
                 ],
                ),
              ),

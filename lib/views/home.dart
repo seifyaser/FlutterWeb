@@ -56,18 +56,21 @@ class _HomeState extends State<Home> {
           ),
 
           // الصورة تتحرك مع scroll
-          Positioned(
-            top: -_scrollOffset * 0.5,
-            left: 0,
-            right: 0,
-            child: Image.asset(
-              'assets/firstbackgropund.jpg',
-              fit: BoxFit.cover,
-              height: 600,
-              color: Colors.black.withOpacity(0.3),
-              colorBlendMode: BlendMode.darken,
-            ),
-          ),
+          Positioned.fill(
+  child: RepaintBoundary(
+    child: Transform.translate(
+      offset: Offset(0, -_scrollOffset * 0.5),
+      child: Image.asset(
+        'assets/firstbackgropund.webp',
+        fit: BoxFit.cover,
+        height: 600,
+        color: Colors.black.withOpacity(0.3),
+        colorBlendMode: BlendMode.darken,
+      ),
+    ),
+  ),
+),
+
 
           // المحتوى الرئيسي
           NotificationListener<ScrollNotification>(

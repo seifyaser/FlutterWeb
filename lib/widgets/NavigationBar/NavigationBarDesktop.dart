@@ -1,4 +1,4 @@
-import 'package:demo/widgets/button.dart';
+import 'package:demo/utils/button.dart';
 import 'package:demo/widgets/NavigationBar/NavBarItem.dart';
 import 'package:demo/widgets/NavigationBar/NavBarLogo.dart';
 import 'package:flutter/material.dart';

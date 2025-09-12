@@ -1,4 +1,3 @@
-import 'package:demo/utils/backgroundScreen.dart';
 import 'package:demo/views/home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

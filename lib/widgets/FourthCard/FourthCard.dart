@@ -7,7 +7,7 @@ class FourthCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(20),
-      child: Image.asset('assets/why.png'),
+      child: Image.asset('assets/why.webp'),
     );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:demo/widgets/button.dart';
+import 'package:demo/utils/button.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -103,7 +103,7 @@ class FirstPageDesktop extends StatelessWidget {
                       ? 300
                       : 350,
               child: Image.asset(
-                'assets/firstpagephoto.png',
+                'assets/firstpagephoto.webp',
                 fit: BoxFit.contain,
               ),
             ),
