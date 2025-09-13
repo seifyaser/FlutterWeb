@@ -19,7 +19,8 @@ class ContactUsDesktop extends StatelessWidget {
          padding: const EdgeInsets.symmetric(horizontal: 50),
          child: Row(
            children: [
-             Expanded(flex: 2, child: buildContactForm(textColor, 16)),
+             Expanded(flex: 2, child: const Expanded(flex: 2, child: ContactForm()),
+),
              Spacer(flex: 1),
              Expanded(flex: 2, child: buildInfoSection(textColor, 17)),
            ],

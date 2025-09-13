@@ -39,6 +39,7 @@ dependencies:
   flutter_zoom_drawer: ^3.2.0
   google_fonts: ^6.3.1
   scrollable_positioned_list: ^0.3.8
+  dio: ^5.9.0
 
 dev_dependencies:
   flutter_test:

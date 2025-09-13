@@ -17,7 +17,7 @@ class ContactUsMobile extends StatelessWidget {
         children: [
           buildHeader(textColor, 24, 14),
           const SizedBox(height: 20),
-          buildContactForm(textColor, 14),
+          ContactForm(),
           const SizedBox(height: 30),
           buildInfoSection(textColor, 16),
         ],
