@@ -25,11 +25,19 @@ class _HomeState extends State<Home> {
 
   double _scrollOffset = 0;
 
+  bool showBackground = true;
+
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
-      mobile: (context) => buildMobileView(),
-      desktop: (context) => buildDesktopView(),
+      mobile: (context) {
+        showBackground = false; 
+        return buildMobileView();
+      },
+      desktop: (context) {
+        showBackground = true; 
+        return buildDesktopView();
+      },
     );
   }
 
@@ -55,22 +63,22 @@ class _HomeState extends State<Home> {
             ),
           ),
 
-          // الصورة تتحرك مع scroll
-          Positioned.fill(
-  child: RepaintBoundary(
-    child: Transform.translate(
-      offset: Offset(0, -_scrollOffset * 0.5),
-      child: Image.asset(
-        'assets/firstbackgropund.webp',
-        fit: BoxFit.cover,
-        height: 600,
-        color: Colors.black.withOpacity(0.3),
-        colorBlendMode: BlendMode.darken,
-      ),
-    ),
-  ),
-),
-
+          // الخلفية تظهر بس لو showBackground = true
+          if (showBackground)
+            Positioned.fill(
+              child: RepaintBoundary(
+                child: Transform.translate(
+                  offset: Offset(0, -_scrollOffset * 0.5),
+                  child: Image.asset(
+                    'assets/firstbackgropund.webp',
+                    fit: BoxFit.cover,
+                    height: 600,
+                    color: Colors.black.withOpacity(0.3),
+                    colorBlendMode: BlendMode.darken,
+                  ),
+                ),
+              ),
+            ),
 
           // المحتوى الرئيسي
           NotificationListener<ScrollNotification>(
@@ -82,10 +90,7 @@ class _HomeState extends State<Home> {
               }
               return false;
             },
-            //A ScrollablePositionedList works much like the builder version of ListView
-            // except that the list can be scrolled or jumped to a specific item.
-            
-            child: ScrollablePositionedList.builder(    // بديل لل listview عشان cards بتاعت nav bar تشتتغل لما تضغط عليها كلها
+            child: ScrollablePositionedList.builder(
               itemScrollController: _itemScrollController,
               itemPositionsListener: _itemPositionsListener,
               padding: const EdgeInsets.only(top: 100),
@@ -133,7 +138,6 @@ class _HomeState extends State<Home> {
                         _itemScrollController.scrollTo(
                             index: 2, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
                         break;
-
                       case 'Contact Us':
                         _itemScrollController.scrollTo(
                             index: 4, duration: const Duration(milliseconds: 1200), curve: Curves.easeInOut);
@@ -153,29 +157,29 @@ class _HomeState extends State<Home> {
     return ZoomDrawer(
       controller: _zoomDrawerController,
       style: DrawerStyle.defaultStyle,
-     menuScreen: Scaffold(
-      backgroundColor: Color(0xff23113b),
-       body: DrawerItems(
-         zoomDrawerController: _zoomDrawerController,
-         onItemSelected: (title) {
-           switch (title) {
-        case 'Home':
-          _itemScrollController.scrollTo(index: 0, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
-          break;
-        case 'Details':
-          _itemScrollController.scrollTo(index: 1, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
-          break;
-        case 'Our Team':
-          _itemScrollController.scrollTo(index: 2, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
-          break;
-        case 'Contact Us':
-          _itemScrollController.scrollTo(index: 4, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
-          break;
-           }
-         },
-       ),
-     ),
-      mainScreen: buildDesktopView(), // Scroll يعمل هنا أيضاً
+      menuScreen: Scaffold(
+        backgroundColor: const Color(0xff23113b),
+        body: DrawerItems(
+          zoomDrawerController: _zoomDrawerController,
+          onItemSelected: (title) {
+            switch (title) {
+              case 'Home':
+                _itemScrollController.scrollTo(index: 0, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+                break;
+              case 'Details':
+                _itemScrollController.scrollTo(index: 1, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+                break;
+              case 'Our Team':
+                _itemScrollController.scrollTo(index: 2, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+                break;
+              case 'Contact Us':
+                _itemScrollController.scrollTo(index: 4, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+                break;
+            }
+          },
+        ),
+      ),
+      mainScreen: buildDesktopView(), // بيستخدم نفس الديسكتوب بس showBackground = false
       borderRadius: 24.0,
       showShadow: true,
       angle: -10.0,
